@@ -14,16 +14,15 @@ footer: I Am Finite
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
-  - title: twitter
+  - title: Twitter
     url: https://x.com/I_Am_Finite
-  - title: facebook
-    url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket
-    url: http://bitbucket.org/jekyll
-  - title: github
-    url: https://github.com/IronSummitMedia/startbootstrap
+  - title: GitHub
+    url: https://github.com/I-Am-Finite
+  - title: LinkedIn
+    url: https://www.linkedin.com/in/michaelreser/
+  - title: Instagram
+    url: https://www.instagram.com/i_am_finite/
+
 
 # Build settings
 markdown: kramdown
