@@ -14,12 +14,12 @@ footer: I Am Finite
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
-  - title: twitter
-    url: https://x.com/I_Am_Finite
   - title: github
     url: https://github.com/I-Am-Finite
   - title: linkedin
     url: https://www.linkedin.com/in/michaelreser/
+  - title: twitter
+    url: https://x.com/I_Am_Finite
   - title: instagram
     url: https://www.instagram.com/i_am_finite/
 
