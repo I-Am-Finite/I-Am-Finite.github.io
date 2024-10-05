@@ -18,7 +18,7 @@ $(function() {
     var scrollTimeout;
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
-        var offsetTop = $($anchor.attr('href')).offset().top - ($('nav').height() + 20); // scroll down to the exact top of the section
+        var offsetTop = $($anchor.attr('href')).offset().top - ($('nav').height() + 100); // scroll down to the exact top of the section
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(function() {
             $('html, body').stop().animate({
