@@ -15,11 +15,16 @@ $(window).scroll(function() {
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
+    var scrollTimeout;
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
+        var offsetTop = $($anchor.attr('href')).offset().top - 100; // adjust the offset to account for the navbar height
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(function() {
+            $('html, body').stop().animate({
+                scrollTop: offsetTop
+            }, 1500, 'easeInOutExpo');
+        }, 100);
         event.preventDefault();
     });
 });
