@@ -18,17 +18,19 @@ $(function() {
     var scrollTimeout;
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
-        var offsetTop = $($anchor.attr('href')).offset().top - ($('nav').height() + 100); // scroll down to the exact top of the section
+        var offsetTop = $($anchor.attr('href')).offset().top - $('nav').height(); // scroll down to the top of the section
+        var sectionHeight = $($anchor.attr('href')).height(); // get the height of the section
+        var viewportHeight = $(window).height(); // get the height of the viewport
+        var offset = offsetTop + (sectionHeight - viewportHeight) / 2; // calculate the offset to center the section in the viewport
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(function() {
             $('html, body').stop().animate({
-                scrollTop: offsetTop
+                scrollTop: offset
             }, 1500, 'easeInOutExpo');
         }, 100);
         event.preventDefault();
     });
 });
-
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
