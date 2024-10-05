@@ -19,8 +19,7 @@ $(function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
         var target = $($anchor.attr('href'));
-        var h2Element = target.find('h2');
-        var offsetTop = h2Element.offset().top - $(window).height() + h2Element.height(); // adjust the offset to account for the navbar height and keep the "Who Am I?" text on screen
+        var offsetTop = target.offset().top - $(window).height() + target.find('h2').height(); // adjust the offset to keep the heading on screen
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(function() {
             $('html, body').stop().animate({
