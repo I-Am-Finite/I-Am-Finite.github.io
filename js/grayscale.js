@@ -18,7 +18,7 @@ $(function() {
     var scrollTimeout;
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
-        var offsetTop = $($anchor.attr('href')).offset().top - $('nav').height(); // scroll down to the top of the section
+        var offsetTop = $($anchor.attr('href')).offset().top - $('nav').height() - parseInt($('nav').css('padding-top')) - parseInt($('nav').css('border-top-width')) - parseInt($($anchor.attr('href')).css('margin-top')) - parseInt($($anchor.attr('href')).css('padding-top')); // scroll down to the top of the section
         var sectionHeight = $($anchor.attr('href')).height(); // get the height of the section
         var viewportHeight = $(window).height(); // get the height of the viewport
         var offset = offsetTop + (sectionHeight - viewportHeight) / 2; // calculate the offset to center the section in the viewport
@@ -31,6 +31,7 @@ $(function() {
         event.preventDefault();
     });
 });
+
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
