@@ -18,7 +18,7 @@ $(function() {
     var scrollTimeout;
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
-        var offsetTop = $($anchor.attr('href')).offset().top - 100; // adjust the offset to account for the navbar height
+        var offsetTop = $($anchor.attr('href')).offset().top - 200; // adjust the offset to account for the navbar height
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(function() {
             $('html, body').stop().animate({
