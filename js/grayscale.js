@@ -18,14 +18,12 @@ $(function() {
     var scrollTimeout;
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
-        var offsetTop = $($anchor.attr('href')).offset().top - $('nav').height() - parseInt($('nav').css('padding-top')) - parseInt($('nav').css('border-top-width')) - parseInt($($anchor.attr('href')).css('margin-top')) - parseInt($($anchor.attr('href')).css('padding-top')); // scroll down to the top of the section
-        var sectionHeight = $($anchor.attr('href')).height(); // get the height of the section
-        var viewportHeight = $(window).height(); // get the height of the viewport
-        var offset = offsetTop + (sectionHeight - viewportHeight) / 2; // calculate the offset to center the section in the viewport
+        var target = $($anchor.attr('href'));
+        var offsetTop = target.offset().top - 20; // adjust the offset to account for the navbar height and scroll 20 pixels above the "Who Am I?" text
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(function() {
             $('html, body').stop().animate({
-                scrollTop: offset
+                scrollTop: offsetTop
             }, 1500, 'easeInOutExpo');
         }, 100);
         event.preventDefault();
