@@ -19,7 +19,7 @@ $(function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
         var target = $($anchor.attr('href'));
-        var offsetTop = target.offset().top - $(window).height() + target.find('h2').height(); // adjust the offset to keep the heading on screen
+        var offsetTop = $(this).data('offset'); // get the offset value from the data attribute
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(function() {
             $('html, body').stop().animate({
