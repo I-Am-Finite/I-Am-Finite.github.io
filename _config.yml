@@ -1,5 +1,5 @@
 # Site settings
-title: Michael Reser
+title: Pushing Boundaries
 email: resercmichael@gmail.com
 url: https://i-am-finite.github.io
 description: "Merging technology, music, and timeless art forms. From building dynamic web applications to creating audio and visual artistry, I combine technical precision with creative passion. Here you can explore my projects, artistic works, and music!"
@@ -10,7 +10,7 @@ color:
   links: '#219ab3'
 
 # Footer settings
-footer: I Am Finite
+footer: Michael Reser
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
