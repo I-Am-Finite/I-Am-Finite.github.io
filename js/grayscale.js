@@ -19,7 +19,8 @@ $(function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
         var target = $($anchor.attr('href'));
-        var offsetTop = target.offset().top - 20; // adjust the offset to account for the navbar height and scroll 20 pixels above the "Who Am I?" text
+        var h2Element = target.find('h2');
+        var offsetTop = h2Element.offset().top - 20; // adjust the offset to account for the navbar height and scroll 20 pixels above the "Who Am I?" text
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(function() {
             $('html, body').stop().animate({
